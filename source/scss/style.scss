@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+@import 'fonts';
+@import 'null';
+@import 'var';
+@import 'header';
+@import 'media';
+@import 'effects';
+@import 'person';
+
+.wrapper{
+    transition: .5s;
+}
+.container{
+    max-width: 970px;
+    margin: 0 auto;
+}
+section{
+    margin-top: 60px;
+}
+section:first-child{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
