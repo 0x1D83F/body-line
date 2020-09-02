@@ -1,0 +1,77 @@
+.effects__title {
+}
+.price__container {
+}
+.price__tabs {
+}
+.tabs__ul {
+    display: flex;
+    justify-content: center;
+}
+.tabs__item{
+    background-color: $goldColor;
+    margin-right: 10px;
+    padding: 7px 12px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: $mont;
+    letter-spacing: .5px;
+}
+.price__content{
+    position: relative;
+}
+.price__our{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0px 20px;
+}
+._mod__price{
+    opacity: 1;
+    visibility: visible;
+}
+.price__content {
+    margin-top: 30px;
+}
+.price__content_img img{
+    max-width: 350px;
+}
+.price__content_text {
+    padding: 0px 40px;
+}
+.price__content_title {
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+    font-size: 25px;
+    color: $mainTitle;
+}
+.price__content_sub {
+    font-size: 18px;
+    color: $mainBrawn;
+    font-family: $messiri;
+    line-height: 22px;
+    text-align: justify;
+}
+.price__content_btn{
+    margin-top: 40px;
+    text-align: center;
+}
+.price__content_btn a{
+    font-size: 25px;
+    color: white;
+    background-color: $mainTitle;
+    padding: 7px 30px;
+    transition: .5s;
+}
+.price__content_btn a:hover{
+    border: 1px solid $mainTitle;
+    background-color: transparent;
+    color: $mainTitle;
+}
+.price__content_btn a:active{
+    background-color: $mainTitle;
+    color: white;
+}

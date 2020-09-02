@@ -1,12 +1,24 @@
 .person {
+    position: relative;
 }
 .person__info{
     display: flex;
+}
+.person:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../img/person/mandala.svg) 0 0 / cover no-repeat;
+    height: 100%;
+    width: 400px;
+    z-index: -1;
 }
 .effects__title {
 }
 .person__block {
     flex: 0 1 50%;
+    margin-left: 10px;
 }
 .person__block-img{
     height: 100%;

@@ -1,3 +1,11 @@
+@media(min-width: 1500px){
+    .mod_mandala{
+        background-position: 0 0;
+    }
+    .process__video iframe{
+        height: 600px;
+    }
+}
 @media(max-width: 1100px){
     .mod_mandala{
         max-width: 450px;
@@ -187,6 +195,7 @@
     .effects__photo img{
         transform: translate(-17%)
     }
+
 }
 @media(max-width: 421px){
     .header__title h2{

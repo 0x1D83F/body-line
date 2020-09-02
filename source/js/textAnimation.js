@@ -102,10 +102,10 @@ window.addEventListener('scroll', function () {
 
     //Problems video block
     const pro_video = document.querySelector('.problems__video'),
-          pro_text = document.querySelector('.problems__info'),
-          pro_main = document.querySelector('.problems'),
-          pro_video_video = document.querySelector('.pro_video'),
-          pro_gif = document.querySelector('.gif-mobile');
+        pro_text = document.querySelector('.problems__info'),
+        pro_main = document.querySelector('.problems'),
+        pro_video_video = document.querySelector('.pro_video'),
+        pro_gif = document.querySelector('.gif-mobile');
 
     let distanceToMainBlock = pro_main.getBoundingClientRect().top;
     let placewhereAnimItWork = userWindowHeight / 3;
@@ -114,19 +114,19 @@ window.addEventListener('scroll', function () {
     gifInstedVideo.src = './img/person/image.gif';
     gifInstedVideo.classList.add('_gif-display')
 
-    if(userWidth < 700){
+    if (userWidth < 700) {
         pro_video_video.style.display = 'none'
         pro_gif.classList.add('_gif-display')
-    }else{
+    } else {
         pro_video_video.style.display = 'block'
         pro_gif.classList.remove('_gif-display')
     }
 
 
-    if(distanceToMainBlock < placewhereAnimItWork){
+    if (distanceToMainBlock < placewhereAnimItWork) {
         pro_video.classList.add('_problems__transform')
         pro_text.classList.add('_problems__transform')
-    }else if(distanceToMainBlock >= userWindowHeight){
+    } else if (distanceToMainBlock >= userWindowHeight) {
         pro_video.classList.remove('_problems__transform')
         pro_text.classList.remove('_problems__transform')
     }
@@ -144,22 +144,39 @@ window.addEventListener('scroll', function () {
     let animStartPlace = userWindowHeight / 1.2;
     let animStartPlaceSub = userWindowHeight / 1.8;
 
-    if(userWidth < 700){
+    if (userWidth < 700) {
         animStartPlaceSub = userWindowHeight / 1.4;
     }
-    
-    if(distanceToPersonal < animStartPlace){
-        pers_title.classList.add('_pers__transform')
-    }else{
-        pers_title.classList.remove('_pers__transform')
+
+    if (distanceToPersonal < animStartPlace) {
+        pers_title.classList.add('_pers__transform');
+    } else {
+        pers_title.classList.remove('_pers__transform');
     }
 
-    if(distanceToSub < animStartPlaceSub){
+    if (distanceToSub < animStartPlaceSub) {
         pers_sub.classList.add('_pers__transform');
         pers_img.classList.add('_pers__transform');
-    }else{
+    } else {
         pers_sub.classList.remove('_pers__transform');
         pers_img.classList.remove('_pers__transform');
+    }
+
+
+    //Process
+    const process_iframe = document.querySelector('.iframe');
+
+    let distanceToFrame = process_iframe.getBoundingClientRect().top;
+    let frameStartAnim = userWindowHeight / 0.99;
+
+    if(userWidth > 1500){
+        frameStartAnim = userWindowHeight / 0.7
+    }
+
+    if(distanceToFrame < frameStartAnim){
+        process_iframe.classList.add('_process_transform')
+    }else{
+        process_iframe.classList.remove('_process_transform')
     }
 
 })
