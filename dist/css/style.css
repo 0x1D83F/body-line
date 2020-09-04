@@ -1015,7 +1015,7 @@ article._transform {
   top: 15%;
 }
 
-.form_feed__title {
+.form_feed__title p {
   color: #efbf91;
   font-size: 35px;
   margin-bottom: 30px;

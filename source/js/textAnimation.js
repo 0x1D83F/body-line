@@ -12,6 +12,7 @@ window.onload = function () {
     header_sub.classList.add('_onload__sub')
 
     setTimeout(() => { header.style.transition = '0.5s' }, 1500);
+    imageReplacer();
 
 }
 
@@ -205,6 +206,8 @@ window.addEventListener('scroll', function () {
 
     if(distanceToForm < frameStartAnimTabs){
         form_animItem.classList.add('form_wrapper__opacity');
+    }else{
+        form_animItem.classList.remove('form_wrapper__opacity');
     }
 
 })
