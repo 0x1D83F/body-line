@@ -214,6 +214,16 @@ window.addEventListener('scroll', function () {
         tab_flex.classList.remove('price__flex-opacity')
     }
 
+
+    //Form
+    const form_block = document.querySelector('.form_feed');
+    const form_animItem = document.querySelector('.form_wrapper');
+    const distanceToForm = form_block.getBoundingClientRect().top;
+
+    if(distanceToForm < frameStartAnimTabs){
+        form_animItem.classList.add('form_wrapper__opacity');
+    }
+
 })
 
 ;

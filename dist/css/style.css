@@ -991,10 +991,22 @@ article._transform {
   text-align: center;
 }
 
+.form_feed {
+  margin-top: 200px;
+}
+
 .form_wrapper {
   padding-bottom: 55.55%;
   background: url(../img/google/form_min.jpg) center center/cover no-repeat;
   position: relative;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  opacity: 0;
+}
+
+.form_wrapper__opacity {
+  opacity: 1;
 }
 
 .form__position {
