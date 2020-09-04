@@ -14,8 +14,9 @@ window.onload = function () {
     setTimeout(() => { header.style.transition = '0.5s' }, 1500);
 }
 
-document.querySelector('.burger__close').onclick = function () {
+document.querySelector('.burger__close').addEventListener('click',burger)
 
+function burger(){
     document.querySelector('.wrapper').classList.toggle('header__transform');
     document.querySelector('.burger__main__menu').classList.toggle('opacity');
 
@@ -29,7 +30,6 @@ document.querySelector('.burger__close').onclick = function () {
     document.querySelector('.line_top').classList.toggle('line_top_active')
     document.querySelector('.line_middle').classList.toggle('line_middle_active')
     document.querySelector('.line_bottom').classList.toggle('line_bottom_active')
-
 }
 
 
@@ -167,7 +167,7 @@ window.addEventListener('scroll', function () {
     const process_iframe = document.querySelector('.iframe');
 
     let distanceToFrame = process_iframe.getBoundingClientRect().top;
-    let frameStartAnim = userWindowHeight / 0.99;
+    let frameStartAnim = userWindowHeight / 0.8;
 
     if(userWidth > 1500){
         frameStartAnim = userWindowHeight / 0.7

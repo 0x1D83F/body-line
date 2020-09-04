@@ -8,9 +8,13 @@
     display: flex;
     justify-content: center;
 }
-.tabs__item{
-    background-color: $goldColor;
+.tabs__ul li{
     margin-right: 10px;
+
+}
+
+.tabs__item div{
+    background-color: $goldColor;
     padding: 7px 12px;
     font-size: 20px;
     cursor: pointer;
@@ -21,7 +25,6 @@
     position: relative;
 }
 .price__our{
-    display: flex;
     position: absolute;
     left: 0;
     top: 0;
@@ -29,6 +32,14 @@
     visibility: hidden;
     padding: 0px 20px;
 }
+.price__our_active{
+    opacity: 1;
+    visibility: visible;
+}
+.price__flex{
+    display: flex;
+}
+
 ._mod__price{
     opacity: 1;
     visibility: visible;
@@ -64,7 +75,8 @@
     color: white;
     background-color: $mainTitle;
     padding: 7px 30px;
-    transition: .5s;
+    transition: .4s;
+    letter-spacing: 1px;
 }
 .price__content_btn a:hover{
     border: 1px solid $mainTitle;
@@ -75,3 +87,40 @@
     background-color: $mainTitle;
     color: white;
 }
+
+.price__content_amount {
+    margin-top: 20px;
+    display: flex;
+}
+.price__value{
+    flex-basis: 33.333%;
+    margin-right: 5px;
+}
+.price__value_title{
+    font-family: $openSans;
+    color: $mainTitle;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+.price__value_sub{
+    font-family: $openSans;
+    color: $mainTitle;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+}
+.price__value_price{
+    color: red;
+    font-family: $openSans;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+    font-weight: 600;
+    text-align: center;
+}
+

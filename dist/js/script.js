@@ -15,22 +15,6 @@ function testWebP(callback) {
             document.querySelector('body').classList.add('no-webp');
         }
 });;
-// let headerCloser = document.querySelector('.line_4');
-// let burgerNav = document.querySelector('.burger-nav')
-
-// let firstLine = document.querySelector('.line_1')
-// let secLine = document.querySelector('.line_2')
-// let thirdLine = document.querySelector('.line_3')
-
-// headerCloser.addEventListener('click', function () {
-//     burgerNav.classList.toggle('_active')
-
-//     firstLine.classList.toggle('_rotate-line-first')
-//     secLine.classList.toggle('_disable');
-//     thirdLine.classList.toggle('_rotate-line-sec');
-
-// })
-;
 const header = document.querySelector('.header');
 const menu = document.querySelector('.header__menu');
 const header_title = document.querySelector('.header__title h2');
@@ -47,8 +31,9 @@ window.onload = function () {
     setTimeout(() => { header.style.transition = '0.5s' }, 1500);
 }
 
-document.querySelector('.burger__close').onclick = function () {
+document.querySelector('.burger__close').addEventListener('click',burger)
 
+function burger(){
     document.querySelector('.wrapper').classList.toggle('header__transform');
     document.querySelector('.burger__main__menu').classList.toggle('opacity');
 
@@ -62,7 +47,6 @@ document.querySelector('.burger__close').onclick = function () {
     document.querySelector('.line_top').classList.toggle('line_top_active')
     document.querySelector('.line_middle').classList.toggle('line_middle_active')
     document.querySelector('.line_bottom').classList.toggle('line_bottom_active')
-
 }
 
 
@@ -200,7 +184,7 @@ window.addEventListener('scroll', function () {
     const process_iframe = document.querySelector('.iframe');
 
     let distanceToFrame = process_iframe.getBoundingClientRect().top;
-    let frameStartAnim = userWindowHeight / 0.99;
+    let frameStartAnim = userWindowHeight / 0.8;
 
     if(userWidth > 1500){
         frameStartAnim = userWindowHeight / 0.7
@@ -215,46 +199,91 @@ window.addEventListener('scroll', function () {
 })
 
 ;
+const processElement = document.getElementById('process');
+const processButton = document.querySelector('.menu_link_video');
+const processButtonBurger = document.querySelector('.menu_link_video_burger');
 
-;
-document.querySelector('.tabs__ul').addEventListener('click',price);
 
-function price(event){
-    let target = event.target;
-    let tabs = document.querySelectorAll('.price__our');
 
-    if(target.classList.contains('tabs__item_class') ) {
-        tabs.forEach((item, index) => {
-            item.classList.remove('_mod__price')
-        })
-        document.querySelector('.price__our_0').classList.add('_mod__price')
-    }else if(target.classList.contains('tabs__item__ant') ) {
-        tabs.forEach((item, index) => {
-            item.classList.remove('_mod__price')
-        })
-        document.querySelector('.price__our_1').classList.add('_mod__price')
-    }else if(target.classList.contains('tabs__item_ban') ) {
-        tabs.forEach((item, index) => {
-            item.classList.remove('_mod__price')
-        })
-        document.querySelector('.price__our_2').classList.add('_mod__price')
-    }else if(target.classList.contains('tabs__item_lim') ) {
-        tabs.forEach((item, index) => {
-            item.classList.remove('_mod__price')
-        })
-        document.querySelector('.price__our_3').classList.add('_mod__price')
-    }else if(target.classList.contains('tabs__item_sam') ) {
-        tabs.forEach((item, index) => {
-            item.classList.remove('_mod__price')
-        })
-        document.querySelector('.price__our_4').classList.add('_mod__price')
-    }else if(target.classList.contains('tabs__item_obg') ) {
-        tabs.forEach((item, index) => {
-            item.classList.remove('_mod__price')
-        })
-        document.querySelector('.price__our_5').classList.add('_mod__price')
-    }
+
+function handlerVideo(e){
+    e.preventDefault();
+    processElement.scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+    })
+}
+
+
+
+processButton.addEventListener('click', handlerVideo)
+processButtonBurger.addEventListener('click', function(e){
+    e.preventDefault();
+    handlerVideo(e);
+    setTimeout(() => burger(), 700 )
+});
+const tabs = document.querySelectorAll('.price__our');
+
+const tabsItem = document.querySelectorAll('.tabs__item');
+const tabDiv = document.querySelectorAll('.tabs__item div');
+function itemHandler(event){
+    let item = event.target;
+    let target = item.className;
+    let getNumber = Number(+target.slice(-1)); // Item.className.slice(-1) не передает дальше ноль,поэтому делаем его строкой и потом обратно в цифру
+    
+    tabDiv.forEach(i => i.removeAttribute('style'))
+    
+    item.style.cssText = `background-color: #093f4f; color: white;`
+    
+
+    tabs.forEach( item => {
+        item.classList.remove('price__our_active');
+
+        if(item.classList.contains(`tab_${getNumber}`) ) item.classList.add('price__our_active');
+    })
+
+   
 
 }
+
+tabsItem.forEach(item => {
+    item.addEventListener('click',itemHandler)
+})
+
+
+//Replacer
+const imageDefaultPosition = document.querySelectorAll('.price__flex');
+const allReplacedItems = document.querySelectorAll('.price__content_img');
+const allReplacedTitles = document.querySelectorAll('.price__content_title'); 
+
+function imageReplacer(){
+    let user_window = Math.max(document.documentElement.clientWidth || window.innerWidth);
+
+    if(user_window <= 768){
+        allReplacedTitles.forEach((item,index) => {
+            item.after(allReplacedItems[index] )
+        })
+    }else{
+        imageDefaultPosition.forEach((item,index) => {
+            item.prepend(allReplacedItems[index] )
+        })
+    }
+}
+window.addEventListener('resize', imageReplacer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;
+
 
