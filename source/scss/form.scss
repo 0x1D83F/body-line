@@ -5,7 +5,7 @@
     padding-bottom: 55.55%;
     background: url(../img/google/form_min.jpg) center center / cover no-repeat;
     position: relative;
-    transition: 2s;
+    transition: 3s;
     opacity: 0;
 }
 .form_wrapper__opacity{
@@ -15,10 +15,6 @@
     position: absolute;
     right: 2%;
     top: 15%;
-}
-.form__items{
-    // padding: 100px 20px 0px 30px;
-    // position: absolute;
 }
 .form_feed__title p{
     color: $goldColor;

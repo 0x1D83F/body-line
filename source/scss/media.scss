@@ -15,7 +15,7 @@
         max-width: 450px;
         background-position: -40px 0;
     }
-    .form_feed__title{
+    .form_feed__title p{
         font-size: 30px;
     }
     .form__name_inp input{
@@ -55,7 +55,7 @@
         font-size: 18px;
         padding: 5px 10px;
     }
-    .form_feed__title{
+    .form_feed__title p{
         font-size: 25px;
     }
     .form__name_inp input{
@@ -116,7 +116,7 @@
     .price__content_img{
         margin-bottom: 10px;
     }
-    .form_feed__title{
+    .form_feed__title p{
         font-size: 20px;
     }
     .form__info{
@@ -266,6 +266,9 @@
     .price__value_sub{
         font-size: 13px;
     }
+    .price__height{
+        height: 40px;
+    }
 }
 @media(max-width: 520px){
     .effects__photo img{
@@ -302,4 +305,9 @@
         padding: 10px 15px;
     }
 
+}
+@media(max-width: 321px){
+    .price__value_price{
+        font-size: 11.5px;
+    }
 }

@@ -999,9 +999,9 @@ article._transform {
   padding-bottom: 55.55%;
   background: url(../img/google/form_min.jpg) center center/cover no-repeat;
   position: relative;
-  -webkit-transition: 2s;
-  -o-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 3s;
+  -o-transition: 3s;
+  transition: 3s;
   opacity: 0;
 }
 
@@ -1102,6 +1102,44 @@ article._transform {
   background-color: #dbdbdb;
 }
 
+section.shares {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.shares__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 50px;
+}
+
+.shares__item {
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+}
+
+.shares__item {
+  margin-right: 20px;
+}
+
+.shares__item:last-child {
+  margin-right: 0;
+}
+
+.shares__item img {
+  max-width: 100%;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.shares__item img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -1164,7 +1202,7 @@ section:first-child {
     background-position: -40px 0;
   }
 
-  .form_feed__title {
+  .form_feed__title p {
     font-size: 30px;
   }
 
@@ -1218,7 +1256,7 @@ section:first-child {
     padding: 5px 10px;
   }
 
-  .form_feed__title {
+  .form_feed__title p {
     font-size: 25px;
   }
 
@@ -1288,7 +1326,7 @@ section:first-child {
     margin-bottom: 10px;
   }
 
-  .form_feed__title {
+  .form_feed__title p {
     font-size: 20px;
   }
 
@@ -1497,6 +1535,10 @@ section:first-child {
   .price__value_sub {
     font-size: 13px;
   }
+
+  .price__height {
+    height: 40px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1541,5 +1583,11 @@ section:first-child {
 
   .tabs__item div {
     padding: 10px 15px;
+  }
+}
+
+@media (max-width: 321px) {
+  .price__value_price {
+    font-size: 11.5px;
   }
 }
