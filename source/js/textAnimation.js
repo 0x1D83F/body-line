@@ -12,6 +12,7 @@ window.onload = function () {
     header_sub.classList.add('_onload__sub')
 
     setTimeout(() => { header.style.transition = '0.5s' }, 1500);
+
 }
 
 document.querySelector('.burger__close').addEventListener('click',burger)
@@ -177,6 +178,23 @@ window.addEventListener('scroll', function () {
         process_iframe.classList.add('_process_transform')
     }else{
         process_iframe.classList.remove('_process_transform')
+    }
+
+    //Price
+    const price_block = document.querySelector('.price');
+    const distanceToPrice = price_block.getBoundingClientRect().top;
+
+    let frameStartAnimTabs = userWindowHeight / 2;
+
+    let tab_ul = document.querySelector('.tabs__ul') ;   
+    let tab_flex = document.querySelector('.price__flex');
+
+    if(distanceToPrice < frameStartAnimTabs){
+        tab_ul.classList.add('tabs__ul_transform')
+        tab_flex.classList.add('price__flex-opacity')
+    } else{
+        tab_ul.classList.remove('tabs__ul_transform')
+        tab_flex.classList.remove('price__flex-opacity')
     }
 
 })

@@ -20,7 +20,13 @@
 @import 'person';
 @import 'process';
 @import 'price';
+@import 'form';
 
+
+body{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 .wrapper{
     transition: .5s;
 }

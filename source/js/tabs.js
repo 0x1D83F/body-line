@@ -2,23 +2,20 @@ const tabs = document.querySelectorAll('.price__our');
 
 const tabsItem = document.querySelectorAll('.tabs__item');
 const tabDiv = document.querySelectorAll('.tabs__item div');
+
 function itemHandler(event){
     let item = event.target;
     let target = item.className;
-    let getNumber = Number(+target.slice(-1)); // Item.className.slice(-1) не передает дальше ноль,поэтому делаем его строкой и потом обратно в цифру
+    let getNumber = Number(target.slice(-1));
     
     tabDiv.forEach(i => i.removeAttribute('style'))
-    
     item.style.cssText = `background-color: #093f4f; color: white;`
     
-
     tabs.forEach( item => {
         item.classList.remove('price__our_active');
 
         if(item.classList.contains(`tab_${getNumber}`) ) item.classList.add('price__our_active');
     })
-
-   
 
 }
 

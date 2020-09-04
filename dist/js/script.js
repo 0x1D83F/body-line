@@ -29,6 +29,7 @@ window.onload = function () {
     header_sub.classList.add('_onload__sub')
 
     setTimeout(() => { header.style.transition = '0.5s' }, 1500);
+
 }
 
 document.querySelector('.burger__close').addEventListener('click',burger)
@@ -196,6 +197,23 @@ window.addEventListener('scroll', function () {
         process_iframe.classList.remove('_process_transform')
     }
 
+    //Price
+    const price_block = document.querySelector('.price');
+    const distanceToPrice = price_block.getBoundingClientRect().top;
+
+    let frameStartAnimTabs = userWindowHeight / 2;
+
+    let tab_ul = document.querySelector('.tabs__ul') ;   
+    let tab_flex = document.querySelector('.price__flex');
+
+    if(distanceToPrice < frameStartAnimTabs){
+        tab_ul.classList.add('tabs__ul_transform')
+        tab_flex.classList.add('price__flex-opacity')
+    } else{
+        tab_ul.classList.remove('tabs__ul_transform')
+        tab_flex.classList.remove('price__flex-opacity')
+    }
+
 })
 
 ;
@@ -226,23 +244,20 @@ const tabs = document.querySelectorAll('.price__our');
 
 const tabsItem = document.querySelectorAll('.tabs__item');
 const tabDiv = document.querySelectorAll('.tabs__item div');
+
 function itemHandler(event){
     let item = event.target;
     let target = item.className;
-    let getNumber = Number(+target.slice(-1)); // Item.className.slice(-1) не передает дальше ноль,поэтому делаем его строкой и потом обратно в цифру
+    let getNumber = Number(target.slice(-1));
     
     tabDiv.forEach(i => i.removeAttribute('style'))
-    
     item.style.cssText = `background-color: #093f4f; color: white;`
     
-
     tabs.forEach( item => {
         item.classList.remove('price__our_active');
 
         if(item.classList.contains(`tab_${getNumber}`) ) item.classList.add('price__our_active');
     })
-
-   
 
 }
 

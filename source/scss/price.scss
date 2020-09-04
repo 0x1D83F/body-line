@@ -3,10 +3,16 @@
 .price__container {
 }
 .price__tabs {
+    overflow: hidden;
 }
 .tabs__ul {
     display: flex;
     justify-content: center;
+    transform: translate(-100%);
+    transition: .5s;
+}
+.tabs__ul_transform{
+    transform: translate(0)
 }
 .tabs__ul li{
     margin-right: 10px;
@@ -25,19 +31,19 @@
     position: relative;
 }
 .price__our{
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     padding: 0px 20px;
 }
 .price__our_active{
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 .price__flex{
     display: flex;
+    opacity: 1;
+    transition: 3.5s ease-in-out;
+}
+.price__flex-opacity{
+    opacity: 1;
 }
 
 ._mod__price{
