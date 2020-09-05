@@ -298,6 +298,13 @@
     .price__content_text{
         padding: 0px 10px;
     }
+    .footer__container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__social{
+        margin: 20px 0;
+    }
 
 }
 @media(max-width: 421px){
