@@ -4,6 +4,8 @@ const header_title = document.querySelector('.header__title h2');
 const header_sub = document.querySelector('.header__sub h2');
 
 
+
+
 window.onload = function () {
 
     header.classList.add('_onload__header')
@@ -210,5 +212,9 @@ window.addEventListener('scroll', function () {
         form_animItem.classList.remove('form_wrapper__opacity');
     }
 
+
+
 })
+
+
 

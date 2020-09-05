@@ -2,15 +2,21 @@ section.shares{
     margin-top: 100px;
     margin-bottom: 0;
 }
+section.shares .effects__title{
+    margin-bottom: 20px;
+}
 .shares__container{
     display: flex;
     padding: 0px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .shares__item {
-   flex-basis: 33.333%;
+   flex-basis: 33%;
 }
 .shares__item{
     margin-right: 20px;
+    border: 1px solid black;
 }
 .shares__item:last-child{
     margin-right: 0;
@@ -19,6 +25,4 @@ section.shares{
     max-width: 100%;
     transition: .5s;
 }
-.shares__item img:hover{
-    transform: scale(1.1);
-}
+
