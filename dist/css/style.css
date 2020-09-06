@@ -417,11 +417,11 @@ a[class*='menu_link']:hover {
 }
 
 .burger__menu_item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .burger__menu_item a {
-  font-size: 30px;
+  font-size: 32px;
   letter-spacing: 1px;
 }
 
@@ -1729,6 +1729,12 @@ section:first-child {
     -webkit-transform: translate(-17%);
         -ms-transform: translate(-17%);
             transform: translate(-17%);
+  }
+
+  .effects__photo img:hover {
+    -webkit-transform: translate(-22%);
+        -ms-transform: translate(-22%);
+            transform: translate(-22%);
   }
 
   .tabs__item div {

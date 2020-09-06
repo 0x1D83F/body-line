@@ -286,7 +286,7 @@ headerButton.addEventListener('click', clickHandler)
 up.addEventListener('click', clickHandler)
 menuBurger.addEventListener('click', function(event){
     clickHandler(event);
-    setTimeout(() => burger(), 700 )
+    setTimeout(() => burger(), 600 )
 })
 ;
 const tabs = document.querySelectorAll('.price__our');

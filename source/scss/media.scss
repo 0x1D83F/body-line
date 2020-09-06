@@ -302,7 +302,10 @@
 }
 @media(max-width: 520px){
     .effects__photo img{
-        transform: translate(-17%)
+        transform: translate(-17%);
+    }
+    .effects__photo img:hover{
+        transform: translate(-22%);
     }
     .tabs__item div{
         font-size: 14px;
