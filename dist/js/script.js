@@ -229,6 +229,35 @@ window.addEventListener('scroll', function () {
         form_animItem.classList.remove('form_wrapper__opacity');
     }
 
+    //Tabs
+
+    
+
+    //Shares
+    const share_container = document.querySelector('.shares');
+    const share_item_0 = document.querySelector('.shares__item_0');
+    const share_item_1 = document.querySelector('.shares__item_1');
+    const share_item_2 = document.querySelector('.shares__item_2');
+
+    const distanceToShares = share_container.getBoundingClientRect().top;
+    
+    let shareStartAnim = userWindowHeight / 2;
+
+    if(userWidth < 700){
+        shareStartAnim = userWindowHeight / 5;
+    }
+
+    if(distanceToShares < shareStartAnim){
+        share_item_0.style.transform = `translate(0)`
+        setTimeout(() => share_item_1.style.transform = `translate(0)`, 500)
+        setTimeout(() => share_item_2.style.transform = `translate(0)`, 1000)
+    }
+    if(distanceToShares > frameStartAnim){
+        share_item_0.removeAttribute('style');
+        share_item_1.removeAttribute('style');
+        share_item_2.removeAttribute('style');
+    }
+
 
 
 })
@@ -236,29 +265,40 @@ window.addEventListener('scroll', function () {
 
 
 ;
-const processElement = document.getElementById('process');
-const processButton = document.querySelector('.menu_link_video');
-const processButtonBurger = document.querySelector('.menu_link_video_burger');
+
+const menuMain = document.querySelector('.main__menu');
+const menuBurger = document.querySelector('.burger__main__menu');
+const headerButton = document.querySelector('.sign__btn');
+
+function orderhandler(event){
+    let targetClassname = event.target.className;
+
+    if(targetClassname !== 'order') return;
+    clickHandler(event)
+}
 
 
+function clickHandler(event){
+    event.preventDefault();
 
+    let target = event.target.getAttribute('data-type');
+    let element = document.getElementById(`anchor-${target}`)
+    console.log(element)
 
-function handlerVideo(e){
-    e.preventDefault();
-    processElement.scrollIntoView({
+    element.scrollIntoView({
         block: "start",
         behavior: "smooth"
     })
 }
 
 
-
-processButton.addEventListener('click', handlerVideo)
-processButtonBurger.addEventListener('click', function(e){
-    e.preventDefault();
-    handlerVideo(e);
+menuMain.addEventListener('click', clickHandler)
+headerButton.addEventListener('click', clickHandler)
+menuBurger.addEventListener('click', function(event){
+    clickHandler(event);
     setTimeout(() => burger(), 700 )
-});
+})
+;
 const tabs = document.querySelectorAll('.price__our');
 
 const tabsItem = document.querySelectorAll('.tabs__item');
@@ -327,11 +367,10 @@ const accordionParagraph = document.querySelectorAll('.accordeon__title p');
 const accordionImage = document.querySelectorAll('.accordeon__title img');
 
 
-
 accordionBodys.forEach((item,index) => {
     item.classList.add(`accordeon-text_${index}`)
 })
-accordionBodyWrap.forEach((item,index) => item.setAttribute('data-number', `accordion_${index}`))
+accordionBodyWrap.forEach((item,index) => item.setAttribute('data-number', `accordion_${index}`));
 accordionParagraph.forEach((item,index) => {
     item.setAttribute('data-number', `accordion_${index}`);
 })
@@ -345,17 +384,14 @@ accordionTitles.forEach((item,index) => {
 
 section.addEventListener('click', function(event){
     let eventSection = event.target;
-    console.log(eventSection.className)
     
-    let getNumberForAccordion = eventSection.getAttribute('data-number').slice(-1) || eventSection.className.slice(-1);
-
-    
+    let getNumberForAccordion = eventSection.getAttribute('data-number').slice(-1);
 
     let findElemAcc = document.querySelector(`.accordeon-text_${getNumberForAccordion}`);
-    let findAccImg = document.querySelector(`.acc-transform-${getNumberForAccordion}`)
+    let findAccImg = document.querySelector(`.acc-transform-${getNumberForAccordion}`);
     
     findElemAcc.classList.toggle('opened')
-    findAccImg.classList.toggle('acc-opened')
+    findAccImg.classList.toggle('acc-opened') // Image
     
 });
 

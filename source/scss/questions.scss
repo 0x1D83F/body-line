@@ -36,17 +36,17 @@
 }
 .accordeon__body{
     padding: 5px 10px 0 10px;
-
 }
 .accordeon-text{
+    font-family: $openSans;
     text-align: justify;
     font-size: 16px;
     letter-spacing: 1px;
-    line-height: 18px;
+    line-height: 20px;
     overflow: hidden;
-    max-height: 0;
-    transition: .5s;
+    max-height:0;
+    transition: max-height .5s;
 }
 .opened {
-    max-height: 150px;
+    max-height: 1000px;
 }

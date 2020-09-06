@@ -212,6 +212,35 @@ window.addEventListener('scroll', function () {
         form_animItem.classList.remove('form_wrapper__opacity');
     }
 
+    //Tabs
+
+    
+
+    //Shares
+    const share_container = document.querySelector('.shares');
+    const share_item_0 = document.querySelector('.shares__item_0');
+    const share_item_1 = document.querySelector('.shares__item_1');
+    const share_item_2 = document.querySelector('.shares__item_2');
+
+    const distanceToShares = share_container.getBoundingClientRect().top;
+    
+    let shareStartAnim = userWindowHeight / 2;
+
+    if(userWidth < 700){
+        shareStartAnim = userWindowHeight / 5;
+    }
+
+    if(distanceToShares < shareStartAnim){
+        share_item_0.style.transform = `translate(0)`
+        setTimeout(() => share_item_1.style.transform = `translate(0)`, 500)
+        setTimeout(() => share_item_2.style.transform = `translate(0)`, 1000)
+    }
+    if(distanceToShares > frameStartAnim){
+        share_item_0.removeAttribute('style');
+        share_item_1.removeAttribute('style');
+        share_item_2.removeAttribute('style');
+    }
+
 
 
 })

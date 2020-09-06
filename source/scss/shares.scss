@@ -8,15 +8,16 @@ section.shares .effects__title{
 .shares__container{
     display: flex;
     padding: 0px 50px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
+    overflow: hidden;
 }
 .shares__item {
-   flex-basis: 33%;
-}
-.shares__item{
     margin-right: 20px;
     border: 1px solid black;
+    flex-basis: 33%;
+    transform: translate(-900px);
+    transition: .5s;
 }
 .shares__item:last-child{
     margin-right: 0;

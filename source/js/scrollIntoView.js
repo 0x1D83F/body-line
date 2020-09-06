@@ -1,23 +1,33 @@
-const processElement = document.getElementById('process');
-const processButton = document.querySelector('.menu_link_video');
-const processButtonBurger = document.querySelector('.menu_link_video_burger');
+
+const menuMain = document.querySelector('.main__menu');
+const menuBurger = document.querySelector('.burger__main__menu');
+const headerButton = document.querySelector('.sign__btn');
+
+function orderhandler(event){
+    let targetClassname = event.target.className;
+
+    if(targetClassname !== 'order') return;
+    clickHandler(event)
+}
 
 
+function clickHandler(event){
+    event.preventDefault();
 
+    let target = event.target.getAttribute('data-type');
+    let element = document.getElementById(`anchor-${target}`)
+    console.log(element)
 
-function handlerVideo(e){
-    e.preventDefault();
-    processElement.scrollIntoView({
+    element.scrollIntoView({
         block: "start",
         behavior: "smooth"
     })
 }
 
 
-
-processButton.addEventListener('click', handlerVideo)
-processButtonBurger.addEventListener('click', function(e){
-    e.preventDefault();
-    handlerVideo(e);
+menuMain.addEventListener('click', clickHandler)
+headerButton.addEventListener('click', clickHandler)
+menuBurger.addEventListener('click', function(event){
+    clickHandler(event);
     setTimeout(() => burger(), 700 )
 })

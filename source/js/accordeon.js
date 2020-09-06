@@ -6,11 +6,10 @@ const accordionParagraph = document.querySelectorAll('.accordeon__title p');
 const accordionImage = document.querySelectorAll('.accordeon__title img');
 
 
-
 accordionBodys.forEach((item,index) => {
     item.classList.add(`accordeon-text_${index}`)
 })
-accordionBodyWrap.forEach((item,index) => item.setAttribute('data-number', `accordion_${index}`))
+accordionBodyWrap.forEach((item,index) => item.setAttribute('data-number', `accordion_${index}`));
 accordionParagraph.forEach((item,index) => {
     item.setAttribute('data-number', `accordion_${index}`);
 })
@@ -24,16 +23,13 @@ accordionTitles.forEach((item,index) => {
 
 section.addEventListener('click', function(event){
     let eventSection = event.target;
-    console.log(eventSection.className)
     
-    let getNumberForAccordion = eventSection.getAttribute('data-number').slice(-1) || eventSection.className.slice(-1);
-
-    
+    let getNumberForAccordion = eventSection.getAttribute('data-number').slice(-1);
 
     let findElemAcc = document.querySelector(`.accordeon-text_${getNumberForAccordion}`);
-    let findAccImg = document.querySelector(`.acc-transform-${getNumberForAccordion}`)
+    let findAccImg = document.querySelector(`.acc-transform-${getNumberForAccordion}`);
     
     findElemAcc.classList.toggle('opened')
-    findAccImg.classList.toggle('acc-opened')
+    findAccImg.classList.toggle('acc-opened') // Image
     
 })

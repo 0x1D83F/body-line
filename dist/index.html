@@ -19,31 +19,37 @@
             <nav class="main__menu">
                 <ul class="menu_list">
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Массаж</a>
+                        <a href="#" class="menu_link"  data-type="shares">Акції</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link menu_link_effect">Еффект</a>
+                        <a href="#" class="menu_link " data-type="effect">Еффект</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Для кого</a>
+                        <a href="#" class="menu_link " data-type="person">Для кого</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Майстер</a>
+                        <a href="#" class="menu_link " data-type="master">Майстер</a>
                     </li>
                     <li class="menu_item ">
-                        <a href="" class="menu_link menu_link_video">Відео</a>
+                        <a href="" class="menu_link " data-type="video">Відео</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Відгуки</a>
+                        <a href="#" class="menu_link " data-type="price">Прайс</a>
                     </li>
                     <li class="menu_item">
-                        <a href="#" class="menu_link">Питання</a>
+                        <a href="#" class="menu_link" data-type="sign">Записатися</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#" class="menu_link" data-type="quest">Питання</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#" class="menu_link" data-type="contacts">Контакти</a>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="header_tel">
-            <a href="tel: +38 063 777 77 77">+38 063 777 77 77</a>
+            <a href="tel: +38 063 777 77 77">+38 096 893 98 00</a>
         </div>
     </section>
     <section class="header__text">
@@ -54,12 +60,11 @@
             <h2>Відкрити нові грані своєї свідомості, <br /> в повній мірі відчути гармонію душі і тіла, <br /> на час відправитися в світ дивовижних ароматів <br /> можна в масажному салоні Body-line</h2>
         </div>
         <section class="sign_up">
-            <button class="sign__btn">Записатися</button>
+            <button class="sign__btn" data-type="sign">Записатися</button>
         </section>
     </section>
 </header>
-        
-        <section class="effects">
+        <section class="effects" id="anchor-effect">
     <div class="effects__title">
         <h2>Висока ефективність масажу</h2>
     </div>
@@ -82,7 +87,7 @@
     </div>
 </section>
 
-<section class="massage_advantage">
+<section class="massage_advantage" id="anchor-person">
     <div class="effects__title">
         <h2>Масаж для тих, хто хоче</h2>
     </div>
@@ -145,7 +150,7 @@
         <div class="problems__info">
             <ul class="problems__list">
                 <li class="problems__item">
-                    Набряклість та лишня вага
+                    Набряклість та зайва вага
                 </li>
                 <li class="problems__item">
                     Хронічна втома
@@ -172,7 +177,7 @@
 
 
 
-        <section class="person">
+        <section class="person" id="anchor-master">
     <div class="effects__title">
         <h2>Хто робить массаж</h2>
     </div>
@@ -212,18 +217,18 @@
 </section>
 
 
-        <section class="process" id='process'>
+        <section class="process" id="anchor-video">
     <div class="effects__title">
         <h2>Як проходить масаж</h2>
     </div>
     <div class="process__video">
-        <iframe width="80%" height="400" src="https://www.youtube.com/embed/U6gZamvkLyc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="iframe"></iframe>
+        <iframe width="90%" height="400" src="https://www.youtube.com/embed/U6gZamvkLyc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="iframe"></iframe>
     </div>
 </section>
 
 
 
-        <section class="price">
+        <section class="price" id="anchor-price">
     <div class="effects__title">
         <h2>Ціни на послуги</h2>
     </div>
@@ -318,7 +323,7 @@
                             
                         </div>
                         <div class="price__content_btn">
-                            <a href="#">Замовити</a>
+                            <a href="#" class='order' data-type="sign" onclick='orderhandler(event)'>Замовити</a>
                         </div>
                     </div>
                 </div>
@@ -394,7 +399,7 @@
                             
                         </div>
                         <div class="price__content_btn">
-                            <a href="#">Замовити</a>
+                            <a href="#" class='order' data-type="sign" onclick='orderhandler(event)'>Замовити</a>
                         </div>
                     </div>
                 </div>
@@ -443,7 +448,7 @@
                             
                         </div>
                         <div class="price__content_btn">
-                            <a href="#">Замовити</a>
+                            <a href="#" class='order' data-type="sign" onclick='orderhandler(event)'>Замовити</a>
                         </div>
                     </div>
                 </div>
@@ -506,7 +511,7 @@
                             
                         </div>
                         <div class="price__content_btn">
-                            <a href="#">Замовити</a>
+                            <a href="#" class='order' data-type="sign" onclick='orderhandler(event)'>Замовити</a>
                         </div>
                     </div>
                 </div>
@@ -560,7 +565,7 @@
                             
                         </div>
                         <div class="price__content_btn">
-                            <a href="#">Замовити</a>
+                            <a href="#" class='order' data-type="sign" onclick='orderhandler(event)'>Замовити</a>
                         </div>
                     </div>
                 </div>
@@ -624,7 +629,7 @@
                             
                         </div>
                         <div class="price__content_btn">
-                            <a href="#">Замовити</a>
+                            <a href="#" class='order' data-type="sign" onclick='orderhandler(event)'>Замовити</a>
                         </div>
                     </div>
                 </div>
@@ -633,7 +638,7 @@
     </div>
 </section>
 
-        <section class="form_feed">
+        <section class="form_feed" id="anchor-sign">
     <div class="effects__title">
         <h2>Записатися на масаж</h2>
     </div>
@@ -667,23 +672,23 @@
         </div>
     </div>
 </section>
-        <section class="shares">
+        <section class="shares" id="anchor-shares">
     <div class="effects__title">
         <h2>Акції місяця</h2>
     </div>
     <div class="shares__container">
-        <div class="shares__item">
+        <div class="shares__item shares__item_0">
             <img src="./img/shares/118462782_309558747159206_243814275179115436_n.png" alt="image">
         </div>
-        <div class="shares__item">
+        <div class="shares__item shares__item_1">
             <img src="./img/shares/118471660_755320315281662_6481665784105925150_n.png" alt="image">
         </div>
-        <div class="shares__item">
+        <div class="shares__item shares__item_2">
             <img src="./img/shares/118477995_2675355099447246_2061022564240404260_n.png" alt="image">
         </div>
     </div>
 </section>
-        <section class="questions">
+        <section class="questions" id="anchor-quest">
 
     <div class="effects__title">
         <h2>Відповіді на часті запитання</h2>
@@ -695,27 +700,82 @@
             <img src="./img/quest/plus.svg" alt="image">
         </div>
         <div class="accordeon__body ">
-            <p class='accordeon-text'>Для вас вже все готово.Одноразова білизна, рушники, душ, фен..</p>
+            <p class='accordeon-text'>В масажному кабінеті використовуються одноразові матеріали: простинь, рушник, білизна та шапочки, тому немає необхідності щось брати своє.</p>
         </div>
     </div>
 
     <div class="accordeon">
         <div class="accordeon__title">
-            <p>Заголовок</p>
+            <p>Чи можу я замовити ваші послуги онлайн?</p>
             <img src="./img/quest/plus.svg" alt="image">
         </div>
         <div class="accordeon__body">
-            <p class='accordeon-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa recusandae fuga necessitatibus repellat sit doloremque cumque ad nisi dolorum! Ullam qui quod repellat eius, repudiandae inventore natus animi fugiat quo sed! Minus autem assumenda similique sequi odit error omnis repellendus voluptates? Officia nisi ullam laborum unde aliquid, modi corrupti.</p>
+            <p class='accordeon-text'>Так, Ви можете скористатись онлайн формою на нашому сайті для попереднього замовлення будь якої послуги оздоровчого центру. Наш адміністратор зв’яжеться з Вами для уточнення деталей і відповість на всі Ваші запитання. Також Ви можете записатись за телефоном вказаним на сторінці.</p>
         </div>
     </div>
 
     <div class="accordeon">
         <div class="accordeon__title">
-            <p>Заголовок</p>
+            <p>Мені подарували сертифікат, що з ним робити? </p>
             <img src="./img/quest/plus.svg" alt="image">
         </div>
         <div class="accordeon__body">
-            <p class='accordeon-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi culpa recusandae fuga necessitatibus repellat sit doloremque cumque ad nisi dolorum! Ullam qui quod repellat eius, repudiandae inventore natus animi fugiat quo sed! Minus autem assumenda similique sequi odit error omnis repellendus voluptates? Officia nisi ullam laborum unde aliquid, modi corrupti.</p>
+            <p class='accordeon-text'>Якщо вам подарували сертифікат, то для його використання, Вам необхідно попередньо узгодити час та дату запису на обрану послугу. Це можна зробити у телефонному режимі.</p>
+        </div>
+    </div>
+    <div class="accordeon">
+        <div class="accordeon__title">
+            <p>Протягом якого часу дійсний сертифікат?</p>
+            <img src="./img/quest/plus.svg" alt="image">
+        </div>
+        <div class="accordeon__body">
+            <p class='accordeon-text'>Термін дії Подарункового сертифікату з моменту отримння 3 місяці.</p>
+        </div>
+    </div>
+    <div class="accordeon">
+        <div class="accordeon__title">
+            <p>Коли та як часто варто проходити курс масажу?</p>
+            <img src="./img/quest/plus.svg" alt="image">
+        </div>
+        <div class="accordeon__body">
+            <p class='accordeon-text'>Профілактика – це найкраща інвестиція у ваше здоров’я. Я рекомендую проходити курс (10-15 сеансів) масажу кожні півроку. . Щоб потрапити на бажаний час – запишіться заздалегідь.</p>
+        </div>
+    </div>
+    <div class="accordeon">
+        <div class="accordeon__title">
+            <p>Чи не змерзну я під час масажу?</p>
+            <img src="./img/quest/plus.svg" alt="image">
+        </div>
+        <div class="accordeon__body">
+            <p class='accordeon-text'>За необхідності вмикається підігрів масажного стола, температура регулюється, щоб досягти найбільш комфортного рівня для клієнта.</p>
+        </div>
+    </div>
+    <div class="accordeon">
+        <div class="accordeon__title">
+            <p>Чи мають бути синці після антицелюлітного масажу?</p>
+            <img src="./img/quest/plus.svg" alt="image">
+        </div>
+        <div class="accordeon__body">
+            <p class='accordeon-text'>Ні. В деяких випадках, можливі незначні поодинокі синці.
+                Якщо у Вас тіло в синцях після антицелюлітного масажу – біжіть від такого масажиста!</p>
+        </div>
+    </div>
+    <div class="accordeon">
+        <div class="accordeon__title">
+            <p>Чи буде мені боляче під час масажу?</p>
+            <img src="./img/quest/plus.svg" alt="image">
+        </div>
+        <div class="accordeon__body">
+            <p class='accordeon-text'>Зазвичай масаж проходить безболісно. Масаж напружених м'язів викликає легкий біль, але через деякий час вона зникає. Якщо Ви відчуваєте біль під час масажу, відразу ж скажіть про це масажисту.</p>
+        </div>
+    </div>
+    <div class="accordeon">
+        <div class="accordeon__title">
+            <p>Чи можу я їсти перед масажем?</p>
+            <img src="./img/quest/plus.svg" alt="image">
+        </div>
+        <div class="accordeon__body">
+            <p class='accordeon-text'>Бажано робити масаж не раніше, ніж через 1 годину після прийому їжі.</p>
         </div>
     </div>
 </section>
@@ -723,12 +783,12 @@
 
 
 
-        <section class="contacts">
+        <section class="contacts" id="anchor-contacts">
     <div class="effects__title">
         <h2>Контакти</h2>
     </div>
     <div class="contacts__info">
-        <p>вулиця Івана Франка, 38</p>
+        <p>вулиця Івана Франка, 40</p>
         <p>м.Львів</p>
     </div>
 </section>
@@ -741,7 +801,7 @@
         </div>
         <div class="footer__social">
             <div class="footer__social_icon">
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100006342964842">
                     <img src="./img/footer/facebook.svg" alt="facebook">
                 </a>
             </div>
@@ -752,7 +812,7 @@
             </div>
         </div>
         <div class="footer__tel">
-            <a href="tel: +38063 777 77 77">+38 063 777 77 77</a>
+            <a href="tel: +38063 777 77 77">+38 096 893 98 00</a>
         </div>
     </div>
 </footer>
@@ -767,25 +827,31 @@
             <nav class="burger__main__menu">
                 <ul class="burger__menu_list">
                     <li class="burger__menu_item">
-                        <a href="#" class="">Массаж</a>
+                        <a href="#" data-type="shares">Акції</a>
                     </li>
                     <li class="burger__menu_item">
-                        <a href="#" class="">Еффект</a>
+                        <a href="#" data-type="effect">Еффект</a>
                     </li>
                     <li class="burger__menu_item">
-                        <a href="#" class="">Для кого</a>
+                        <a href="#" data-type="person">Для кого</a>
                     </li>
                     <li class="burger__menu_item">
-                        <a href="#" class="">Майстер</a>
+                        <a href="#" data-type="master">Майстер</a>
                     </li>
                     <li class="burger__menu_item">
-                        <a href="#" class="menu_link_video_burger">Відео</a>
+                        <a href="#" data-type="video">Відео</a>
                     </li>
                     <li class="burger__menu_item">
-                        <a href="#" class="">Відгуки</a>
+                        <a href="#" data-type="price">Прайс</a>
                     </li>
                     <li class="burger__menu_item">
-                        <a href="#" class="">Питання</a>
+                        <a href="#" data-type="sign">Записатися</a>
+                    </li>
+                    <li class="burger__menu_item">
+                        <a href="#"  data-type="quest">Питання</a>
+                    </li>
+                    <li class="burger__menu_item">
+                        <a href="#" data-type="contacts">Контакти</a>
                     </li>
                 </ul>
             </nav>
