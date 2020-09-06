@@ -30,6 +30,6 @@ section.addEventListener('click', function(event){
     let findAccImg = document.querySelector(`.acc-transform-${getNumberForAccordion}`);
     
     findElemAcc.classList.toggle('opened')
-    findAccImg.classList.toggle('acc-opened') // Image
+    findAccImg.classList.toggle('acc-opened')
     
 })

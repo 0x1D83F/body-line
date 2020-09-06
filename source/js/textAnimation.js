@@ -26,7 +26,6 @@ function burger(){
 
     document.querySelector('.header__nav').style.display = 'none';
 
-    // document.querySelector('._body').classList.toggle('lock')
     document.querySelector('.header__title h2').classList.toggle('_disp')
     document.querySelector('.header__sub h2').classList.toggle('_disp')
 
@@ -45,7 +44,7 @@ window.addEventListener('scroll', function () {
     const img = document.querySelector('.effects__photo')
     const mark = document.querySelector('._mark');
 
-    let block = elem.getBoundingClientRect().top; // Расстояние от элемента до окна браузера
+    let block = elem.getBoundingClientRect().top; 
     let userWindowHeight = window.innerHeight;
     let rate = 1.2;
     let rateSec = 1.5

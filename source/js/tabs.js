@@ -1,5 +1,4 @@
 const tabs = document.querySelectorAll('.price__our');
-
 const tabsItem = document.querySelectorAll('.tabs__item');
 const tabDiv = document.querySelectorAll('.tabs__item div');
 

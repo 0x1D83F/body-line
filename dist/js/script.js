@@ -1,20 +1,4 @@
-function testWebP(callback) {
-
-    var webP = new Image();
-    webP.onload = webP.onerror = function () {
-    callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-    }
-    
-    testWebP(function (support) {
-    
-        if (support == true) {
-            document.querySelector('body').classList.add('webp');
-        }else{
-            document.querySelector('body').classList.add('no-webp');
-        }
-});;
+;
 const header = document.querySelector('.header');
 const menu = document.querySelector('.header__menu');
 const header_title = document.querySelector('.header__title h2');
@@ -43,7 +27,6 @@ function burger(){
 
     document.querySelector('.header__nav').style.display = 'none';
 
-    // document.querySelector('._body').classList.toggle('lock')
     document.querySelector('.header__title h2').classList.toggle('_disp')
     document.querySelector('.header__sub h2').classList.toggle('_disp')
 
@@ -62,7 +45,7 @@ window.addEventListener('scroll', function () {
     const img = document.querySelector('.effects__photo')
     const mark = document.querySelector('._mark');
 
-    let block = elem.getBoundingClientRect().top; // Расстояние от элемента до окна браузера
+    let block = elem.getBoundingClientRect().top; 
     let userWindowHeight = window.innerHeight;
     let rate = 1.2;
     let rateSec = 1.5
@@ -265,10 +248,19 @@ window.addEventListener('scroll', function () {
 
 
 ;
-
 const menuMain = document.querySelector('.main__menu');
 const menuBurger = document.querySelector('.burger__main__menu');
 const headerButton = document.querySelector('.sign__btn');
+const up = document.querySelector('.up');
+
+window.addEventListener('scroll', function(){
+    
+    if(window.scrollY > 1000){
+        up.style.display = 'block'
+    }else{
+        up.style.display = 'none'
+    }
+})
 
 function orderhandler(event){
     let targetClassname = event.target.className;
@@ -277,13 +269,11 @@ function orderhandler(event){
     clickHandler(event)
 }
 
-
 function clickHandler(event){
     event.preventDefault();
 
     let target = event.target.getAttribute('data-type');
     let element = document.getElementById(`anchor-${target}`)
-    console.log(element)
 
     element.scrollIntoView({
         block: "start",
@@ -291,16 +281,15 @@ function clickHandler(event){
     })
 }
 
-
 menuMain.addEventListener('click', clickHandler)
 headerButton.addEventListener('click', clickHandler)
+up.addEventListener('click', clickHandler)
 menuBurger.addEventListener('click', function(event){
     clickHandler(event);
     setTimeout(() => burger(), 700 )
 })
 ;
 const tabs = document.querySelectorAll('.price__our');
-
 const tabsItem = document.querySelectorAll('.tabs__item');
 const tabDiv = document.querySelectorAll('.tabs__item div');
 
@@ -391,7 +380,7 @@ section.addEventListener('click', function(event){
     let findAccImg = document.querySelector(`.acc-transform-${getNumberForAccordion}`);
     
     findElemAcc.classList.toggle('opened')
-    findAccImg.classList.toggle('acc-opened') // Image
+    findAccImg.classList.toggle('acc-opened')
     
 });
 
