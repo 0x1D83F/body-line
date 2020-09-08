@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;
-
-500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @font-face {
   font-family: "bf-pers";
   font-display: swap;
@@ -796,10 +791,12 @@ article._transform {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .process__video iframe {
+  width: 90%;
+  height: 400px;
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -1274,6 +1271,7 @@ section.shares .effects__title {
   right: 20px;
   display: none;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .up img {
@@ -1302,6 +1300,35 @@ section {
 
 section:first-child {
   margin-top: 0;
+}
+
+.form-answer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10000;
+  background-color: white;
+  width: 35%;
+  height: 15%;
+  border-radius: 20px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 20px;
+  display: none;
+}
+
+.form-answer h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 @media (min-width: 580px) {
